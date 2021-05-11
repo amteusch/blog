@@ -8,16 +8,15 @@
 <script>
 	import Card from '$lib/components/Card.svelte';
 	import Page from '$lib/components/Page.svelte';
-
 	export let articles;
 </script>
 
 <svelte:head>
-	<title>Writing • Kevin Pennekamp</title>
+	<title>Writing • Adam Teuscher </title>
 </svelte:head>
 
 <Page class="center flow flow-g-2 | mb-3">
-	<h1>Writing.</h1>
+	<h1>Writing</h1>
 	{#each articles as article}
 		<Card
 			date={article.date}

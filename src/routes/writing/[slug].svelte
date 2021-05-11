@@ -5,7 +5,6 @@
 			const { post, next, prev } = await res.json();
 			return { props: { post, next, prev } };
 		}
-
 		return {
 			status: res.status,
 			error: new Error(`Could not find article '${page.params.slug}'`)
@@ -34,7 +33,7 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<Page width="4" title={post.title} description={post.description}>
+<Page width="6" title={post.title} description={post.excerpt}>
 	<header class="center flow flow-g-none" role="contentinfo">
 		<span class="text-gray-300 uppercase">
 			<time datetime={date}>{date}</time>
@@ -58,7 +57,7 @@
 		&::before {
 			content: '»';
 			margin-right: var(--spacing-000);
-			color: var(--red);
+			color: var(--green);
 		}
 	}
 

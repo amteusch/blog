@@ -1,15 +1,16 @@
 // List of colors that is used to generate utility classes, but also generate
 // CSS custom properties
 $colors: (
-	'gray-100': #fafafa,
+	'gray-100': #fafafaea,
 	'gray-200': #e5eaed,
-	'gray-300': #a7b1bc,
-	'gray-400': #19232a,
-	'gray-500': #0e141e,
+	'gray-300': #a7b1bc, //#a7b1bc
+	'gray-400':  #202020d0,// #19232a,
+	'gray-500': #121212, // #0e141e,
 	'green': #3bd9a6,
 	'blue': #4876f8,
 	'red': #ff0056,
-	'yellow': #ecb015
+	'yellow': #ecb015,
+	'black': #000000
 );
 
 // Typography system (golden ratio)
@@ -39,7 +40,8 @@ $sizes: (
 	'2': 30rem,
 	'3': 40rem,
 	'4': 50rem,
-	'5': 75rem
+	'5': 75rem,
+	'6': 60rem
 );
 
 /*******

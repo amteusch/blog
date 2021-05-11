@@ -10,9 +10,9 @@
 	export let showHeader = true;
 	export { styles as class };
 	export let width = '4';
-	export let title = 'Kevin Pennekamp';
+	export let title = 'Adam Teuscher';
 	export let description =
-		'Personal website of Kevin Pennekamp, a Dutch software engineer. I love CSS, front-end architecture, engineering and writing about it!';
+		'Personal website of Adam Teuscher.';
 </script>
 
 <svelte:head>
@@ -29,6 +29,6 @@
 	<Header class={widthClass} />
 {/if}
 <main class={classes} in:fly={{ y: 50, duration: 250 }}>
-	<slot />
+	<slot></slot>
 </main>
-<slot name="pagination" />
+<slot name="pagination"/>
