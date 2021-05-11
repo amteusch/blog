@@ -28,8 +28,6 @@
 				topics I'm interested in. You can find my resume and contact information below.
 				Thanks for visiting! (By the way, my logo is a hippopotamus, my favorite animal!)
 			</span>
-			<img loading="lazy" src="../static/img/adam.jpg" alt="Adam Teuscher">
-
 			<!-- <i class="flow-t-3 | p-0 text-00 text-gray-300 text-center">
 				"Hippos are the best animal of all time."
 			</i> -->
