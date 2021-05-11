@@ -25,7 +25,7 @@
 				data-tooltip-position="left">About</i
 			>
 		</a>
-		<a href="https://amteusch.github.io/resume/" class="flex-grow">
+		<a href="https://amteusch.github.io/resume/" target="_blank" class="flex-grow">
 			<i
 				data-tooltip="Download my resume"
 				data-tooltip-position="left">Resume</i
