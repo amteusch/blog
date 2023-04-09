@@ -1,6 +1,6 @@
 # adamteuscher.com
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5984ed71-f11d-4618-9553-488bcf60f596/deploy-status)](https://app.netlify.com/sites/dreamy-williams-dea6aa/deploys)
 
 The personal website of Adam Teuscher. Original code by [Kevin Pennekamp](https://github.com/kevtiq/crinkle.dev). This website is created using:
 
