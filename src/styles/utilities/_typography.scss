@@ -1,5 +1,7 @@
+@use '../tokens';
+
 // Generate utility classes around colors
-@each $name, $color in $colors {
+@each $name, $color in tokens.$colors {
 	.text-#{$name},
 	.hover\:text-#{$name}:hover,
 	.focus\:text-#{$name}:focus,
@@ -9,7 +11,7 @@
 }
 
 // Generate utility classes around font-size
-@each $name, $size in $font-sizes {
+@each $name, $size in tokens.$font-sizes {
 	.text-#{$name} {
 		font-size: var(--text-#{$name});
 	}

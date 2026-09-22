@@ -1,67 +1,32 @@
-<script lang="ts">
-	type Link = { name: string; url: string; alt: string };
-
-	const links: Link[] = [
-		{ name: 'twitter', url: 'https://twitter.com/amteusch', alt: 'Link to my Twitter'},
-		{ name: 'linkedin', url: 'https://linkedin.com/in/amteusch', alt: 'Link to my LinkedIn profile'},
-		{ name: 'github', url: 'https://github.com/amteusch', alt: 'Link to my GitHub' },
-		{ name: 'youtube', url: 'https://youtube.com/channel/UCLbsr4IgcVSuh0dseWq3_cA', alt: 'Link to my YouTube channel' }
+<script>
+	import { site } from '$lib/site.js';
+	const links = [
+		{ name: 'About', url: '/meta' },
+		{ name: 'Resume', url: 'https://amteusch.github.io/resume/' },
+		{ name: 'Email', url: `mailto:${site.email}` },
+		{ name: 'RSS', url: '/rss.xml' },
+		{ name: 'X / Twitter', url: 'https://twitter.com/amteusch' },
+		{ name: 'LinkedIn', url: 'https://linkedin.com/in/amteusch' },
+		{ name: 'GitHub', url: 'https://github.com/amteusch' },
+		{ name: 'YouTube', url: 'https://youtube.com/channel/UCLbsr4IgcVSuh0dseWq3_cA' }
 	];
-
-	import Icon from 'svelte-awesome';
-  	import { twitter, github, youtube, linkedin} from 'svelte-awesome/icons';
-	var map = {};
-	map['twitter']=twitter;
-	map['github']=github;
-	map['youtube']=youtube;
-	map['linkedin']=linkedin;
 </script>
 
-<footer class="flex-col items-start | p-1 text-00 bg-gray-400">
-	<div class="links | flex-row items-center justify-end">
-		<a href="/meta" sveltekit:prefetch class="flex-grow">
-			<i
-				data-tooltip="About the website"
-				data-tooltip-position="left">About</i
-			>
-		</a>
-		<a href="https://amteusch.github.io/resume/" target="_blank" class="flex-grow">
-			<i
-				data-tooltip="Download my resume"
-				data-tooltip-position="left">Resume</i
-			>
-		</a>
-		<a href="mailto:adam.m.teuscher@gmail.com" class="flex-grow">
-			<i
-				data-tooltip="Send me an email"
-				data-tooltip-position="left">Email</i
-			>
-		</a>
-		{#each links as link}
-			<a href={link.url} title={link.alt}>
-				<Icon data={map[link.name]} />
-			</a>
-		{/each}
-
-		<!-- <a href="/rss.xml" title="RSS Feed" sveltekit:prefetch>rss</a> -->
-	</div>
-	<!-- <i class="text-center text-000 pb-00 text-gray-100">
-		"A crinkle (/ˈkrɪŋk(ə)l/) is a wrinkle or crease on a surface. It highlights personality and
-		uniqueness."
-	</i> -->
+<footer class="p-1 text-00 bg-gray-400">
+	<nav aria-label="Contact and social links">
+		{#each links as link (link.url)}<a href={link.url}>{link.name}</a>{/each}
+	</nav>
 </footer>
 
-<style lang="scss">
+<style>
 	footer {
 		border-top: 1px solid var(--gray-300);
+		margin-top: 3rem;
 	}
-
-	.links {
-		width: 100%;
-	}
-
-	.links > * + * {
-		margin-left: var(--spacing-0);
-		padding: var(--spacing-000);
+	nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem 1.5rem;
+		justify-content: center;
 	}
 </style>

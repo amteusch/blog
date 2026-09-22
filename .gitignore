@@ -1,7 +1,10 @@
 .DS_Store
-node_modules
-/.svelte
-/build
-/functions
-yarn-error.log
-/.vscode
+node_modules/
+.svelte/
+.svelte-kit/
+build/
+.netlify/
+.env
+.env.*
+!.env.example
+.vscode/

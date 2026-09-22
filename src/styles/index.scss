@@ -1,25 +1,25 @@
 // reset, settings & generic styles
-@import 'tokens';
-@import 'reset';
-@import 'global';
+@use 'tokens';
+@use 'reset';
+@use 'global';
 
 // Layout
-@import 'layout/flow';
-@import 'layout/tiles';
-@import 'layout/pancake';
-@import 'layout/splitter';
-@import 'layout/center';
+@use 'layout/flow';
+@use 'layout/tiles';
+@use 'layout/pancake';
+@use 'layout/splitter';
+@use 'layout/center';
 
 // Utilities
-@import 'utilities/background';
-@import 'utilities/center';
-@import 'utilities/fonts';
-@import 'utilities/typography';
-@import 'utilities/spacing';
-@import 'utilities/hidden';
-@import 'utilities/click-area';
-@import 'utilities/flexbox';
+@use 'utilities/background';
+@use 'utilities/center' as center2;
+@use 'utilities/fonts';
+@use 'utilities/typography';
+@use 'utilities/spacing';
+@use 'utilities/hidden';
+@use 'utilities/click-area';
+@use 'utilities/flexbox';
 
 // Blocks & expections
-@import 'blocks/code';
-@import 'blocks/tooltip';
+@use 'blocks/code';
+@use 'blocks/tooltip';

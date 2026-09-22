@@ -10,6 +10,21 @@ body {
 	transition: var(--transition);
 }
 
+:focus-visible {
+	outline: 2px solid var(--green);
+	outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
+
 // HEADINGS
 h1,
 h2,
@@ -56,7 +71,7 @@ a:hover > * {
 
 p {
 	hyphens: auto;
-	opacity: .8;
+	opacity: 0.8;
 }
 
 i,

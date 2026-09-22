@@ -1,3 +1,5 @@
+@use '../tokens';
+
 // Similar to stack, but without a display; flex;
 .flow > * {
 	margin-top: 0;
@@ -12,7 +14,7 @@
 	margin-top: var(--flow-spacing);
 }
 
-@each $name, $space in $spacing {
+@each $name, $space in tokens.$spacing {
 	// Generate gap classes to be combined with 'flow'
 	.flow-g-#{$name} {
 		--flow-spacing: var(--spacing-#{$name});

@@ -1,4 +1,15 @@
 [build]
-  command = "yarn build"
-  publish = "build/"
-  functions = "functions/"
+ command = "npm run build"
+ publish = "build"
+[build.environment]
+ NODE_VERSION = "24"
+[[redirects]]
+ from = "https://dreamy-williams-dea6aa.netlify.app/*"
+ to = "https://www.adamteuscher.com/:splat"
+ status = 301
+ force = true
+[[redirects]]
+ from = "https://adamteuscher.com/*"
+ to = "https://www.adamteuscher.com/:splat"
+ status = 301
+ force = true

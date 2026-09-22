@@ -1,3 +1,5 @@
+@use '../tokens';
+
 // centering layout with scaling side columns allowing for child elements (e.g.
 // images) to span bigger than the actual center column
 .center {
@@ -22,14 +24,14 @@
 }
 
 // Generate classes to set the padding of the .center
-@each $name, $space in $spacing {
+@each $name, $space in tokens.$spacing {
 	.center-p-#{$name} {
 		--center-spacing: var(--spacing-#{$name});
 	}
 }
 
 // Generate classes to set the width of the .center
-@each $name, $size in $sizes {
+@each $name, $size in tokens.$sizes {
 	.center-w-#{$name} {
 		--center-width: var(--size-#{$name});
 	}
