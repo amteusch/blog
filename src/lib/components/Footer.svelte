@@ -5,7 +5,7 @@
 		{ name: 'Resume', url: 'https://amteusch.github.io/resume/' },
 		{ name: 'Email', url: `mailto:${site.email}` },
 		{ name: 'RSS', url: '/rss.xml' },
-		{ name: 'X / Twitter', url: 'https://twitter.com/amteusch' },
+		{ name: 'X', url: 'https://x.com/amteusch' },
 		{ name: 'LinkedIn', url: 'https://linkedin.com/in/amteusch' },
 		{ name: 'GitHub', url: 'https://github.com/amteusch' },
 		{ name: 'YouTube', url: 'https://youtube.com/channel/UCLbsr4IgcVSuh0dseWq3_cA' }

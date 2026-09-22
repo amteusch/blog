@@ -11,13 +11,13 @@
 			<Logo class="self-start" />
 			<h1 class="p-0">Adam Teuscher</h1>
 			<p class="p-0 text-00 text-gray-200">
-				I'm a computer vision engineer and a BYU computer science graduate. I work with detection,
-				segmentation, and the data behind machine learning. I also <a href="/writing">write</a> about
-				books and other ideas that interest me.
+				I'm a computer vision engineer and a BYU computer science graduate. I'm interested in
+				entrepreneurship, investing, and third-party politics. I also <a href="/writing">write</a>
+				about books and other ideas that interest me.
 			</p>
 			<p class="text-00">
-				You can find my resume and contact information below. And yes, the logo is a hippopotamus—my
-				favorite animal.
+				You can find my resume and contact information below. And yes, the logo is a hippopotamus,
+				my favorite animal.
 			</p>
 		</div>
 		<aside class="flow flex-col" aria-label="Recent writing">
