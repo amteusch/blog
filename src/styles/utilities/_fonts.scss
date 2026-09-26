@@ -1,7 +1,8 @@
 @font-face {
 	font-weight: 400;
 	font-family: 'Inter';
-	src: url('/fonts/Inter-Regular.woff2?v=3.13') format('woff2'),
+	src:
+		url('/fonts/Inter-Regular.woff2?v=3.13') format('woff2'),
 		url('/fonts/Inter-Regular.woff?v=3.13') format('woff');
 	font-display: swap;
 }
@@ -9,7 +10,8 @@
 @font-face {
 	font-weight: 600;
 	font-family: 'Inter';
-	src: url('/fonts/Inter-SemiBold.woff2?v=3.13') format('woff2'),
+	src:
+		url('/fonts/Inter-SemiBold.woff2?v=3.13') format('woff2'),
 		url('/fonts/Inter-SemiBold.woff?v=3.13') format('woff');
 	font-display: swap;
 }
@@ -17,7 +19,8 @@
 @font-face {
 	font-family: 'Hack';
 	font-display: swap;
-	src: url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-regular-subset.woff2')
+	src:
+		url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-regular-subset.woff2')
 			format('woff2'),
 		url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-regular-subset.woff')
 			format('woff');
@@ -26,7 +29,8 @@
 @font-face {
 	font-weight: 600;
 	font-family: 'Hack';
-	src: url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-bold-subset.woff2')
+	src:
+		url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-bold-subset.woff2')
 			format('woff2'),
 		url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-bold-subset.woff')
 			format('woff');
@@ -37,7 +41,8 @@
 	font-family: 'Hack';
 	font-style: italic;
 	font-display: swap;
-	src: url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-italic-subset.woff2')
+	src:
+		url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-italic-subset.woff2')
 			format('woff2'),
 		url('https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-italic-subset.woff')
 			format('woff');

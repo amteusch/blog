@@ -1,34 +1,56 @@
-<!-- src/component/PageTransitions.svelte -->
-<script>
-	import { fly } from 'svelte/transition';
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+	import { page } from '$app/state';
+	import { site, absoluteUrl } from '$lib/site.js';
 	import Header from './Header.svelte';
-
-	$: widthClass = `center-w-${width}`;
-	$: classes = `${widthClass} ${styles}`;
-
-	let styles;
-	export let showHeader = true;
-	export { styles as class };
-	export let width = '4';
-	export let title = 'Adam Teuscher';
-	export let description =
-		'Personal website of Adam Teuscher.';
+	let {
+		children,
+		class: className = '',
+		showHeader = true,
+		width = '4',
+		title = site.name,
+		description = site.description,
+		published = undefined
+	}: {
+		children: Snippet;
+		class?: string;
+		showHeader?: boolean;
+		width?: string;
+		title?: string;
+		description?: string;
+		published?: string;
+	} = $props();
+	const fullTitle = $derived(title === site.name ? title : `${title} • ${site.name}`);
+	const canonical = $derived(absoluteUrl(page.url.pathname));
 </script>
 
 <svelte:head>
-	<title>{title}</title>
-	<meta name="twitter:title" content={title} />
-	<meta property="og:title" content={title} />
-
+	<title>{fullTitle}</title>
 	<meta name="description" content={description} />
-	<meta name="twitter:description" content={description} />
+	<meta name="author" content={site.name} />
+	<link rel="canonical" href={canonical} />
+	<link rel="alternate" type="application/rss+xml" title="Adam Teuscher RSS" href="/rss.xml" />
+	<meta property="og:title" content={fullTitle} />
 	<meta property="og:description" content={description} />
+	<meta property="og:site_name" content={site.name} />
+	<meta property="og:url" content={canonical} />
+	<meta property="og:type" content={published ? 'article' : 'website'} />
+	<meta property="og:image" content={absoluteUrl(site.image)} />
+	<meta property="og:image:alt" content="Adam Teuscher's hippo logo" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:creator" content="@amteusch" />
+	<meta name="twitter:title" content={fullTitle} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={absoluteUrl(site.image)} />
+	{#if published}<meta property="article:published_time" content={published} />{/if}
 </svelte:head>
-
-{#if showHeader}
-	<Header class={widthClass} />
-{/if}
-<main class={classes} in:fly={{ y: 50, duration: 250 }}>
-	<slot></slot>
+{#if showHeader}<Header />{/if}
+<main id="main" tabindex="-1" class="center-w-{width} {className}">
+	{@render children()}
 </main>
-<slot name="pagination"/>
+
+<style>
+	main {
+		flex: 1;
+	}
+</style>

@@ -1,35 +1,20 @@
-<script>
-	export let next = undefined;
-	export let previous = undefined;
+<script lang="ts">
+	type Summary = { slug: string; title: string };
+	let { next, previous }: { next?: Summary; previous?: Summary } = $props();
 </script>
 
-<section class="splitter splitter-w-1 splitter-g-1 | p-1 mt-3">
-	{#if next}
-		<a class="flex-col items-start justify-center" sveltekit:prefetch href={next.url}>
-			<span>← {next.title || 'Next'}</span>
-			<h3>{next.subtitle}</h3>
-		</a>
-	{/if}
-	{#if previous}
-		<a
-			class="flex-col items-end justify-center | text-right"
-			sveltekit:prefetch
-			href={previous.url}
-		>
-			<span>{previous.title || 'Previous'} →</span>
-			<h3>{previous.subtitle}</h3>
-		</a>
-	{/if}
-</section>
+{#if next || previous}
+	<nav class="post-navigation" aria-label="More articles">
+		{#if next}<a href="/writing/{next.slug}">← Newer: {next.title}</a>{/if}
+		{#if previous}<a href="/writing/{previous.slug}">Older: {previous.title} →</a>{/if}
+	</nav>
+{/if}
 
-<style lang="scss">
-	a {
-		text-decoration-color: rgba(0, 0, 0, 0);
-	}
-
-	a > span {
-		color: var(--gray-300);
-		font-size: var(--text-00);
-		text-transform: uppercase;
+<style>
+	.post-navigation {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		gap: 1rem;
 	}
 </style>

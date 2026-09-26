@@ -1,32 +1,27 @@
 <script>
 	import Logo from './Logo.svelte';
-
-	let styles;
-	export { styles as class };
 </script>
 
-<header class={styles}>
-	<div class="inner | flex-row items-center justify-between | mb-0">
-		<Logo />
-	</div>
+<header>
+	<Logo />
+	<nav aria-label="Main navigation">
+		<a href="/writing">Writing</a>
+		<a href="/meta">About</a>
+	</nav>
 </header>
 
-<style lang="scss">
+<style>
 	header {
-		position: -webkit-sticky;
-		position: sticky;
-		top: 0;
-		z-index: 100;
-		width: 100%;
-		margin: var(--spacing-2) auto var(--spacing-0);
-		-webkit-backdrop-filter: blur(20px);
-		backdrop-filter: blur(20px);
-
-		.inner {
-			width: 100%;
-			max-width: calc(var(--center-width, var(--size-4)) + 2 * var(--spacing-1));
-			margin: 0 auto;
-			padding: var(--spacing-000) calc(var(--spacing-1) - var(--spacing-00));
-		}
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: min(100%, 75rem);
+		margin: 1rem auto;
+		padding: 0 1rem;
+		gap: 1rem;
+	}
+	nav {
+		display: flex;
+		gap: 1rem;
 	}
 </style>
